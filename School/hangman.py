@@ -3,6 +3,7 @@ from random import randint
 class Words:
 
     def __init__(self, words):
+        # Not really used but would have been when gone into more complex game
         self.word_list = words
 
 class Hangman:
@@ -16,6 +17,7 @@ class Hangman:
         self.losses = 0
 
     def find_random(self):
+        # Find a random word to play from the word bank
         self.word = self.word_list[randint(0, len(self.word_list)-1)]
         return self.word
 
@@ -26,6 +28,7 @@ class Hangman:
         return new_word
 
     def store_words(self):
+        # Ask user for a word until they feel they have enough words in the bank
         while self.choose != "n":
             word = input("What word do you want in the word bank? ")
             self.word_list.append(word)
@@ -40,6 +43,7 @@ class Hangman:
         return self.word
 
     def included(self, letter, word, dashed_word):
+        # Change the dash from the word to the chosen letter
         partial = list(dashed_word)
         word_in_list = list(word)
         new_dashed = ""
@@ -59,6 +63,9 @@ class Hangman:
             print("You must choose a number")
             self.guesses = int(input("How many guesses do you want? "))
         while self.guesses > 0:
+            # Play the game, while the user has some guesses ask what letter he chooses
+            # If the letter is in the word, change from a dash to a letter and one moved used
+            # If not, only use one move
             print("You have total of {} guesses".format(self.guesses))
             print("Your word: {}".format(dashed_word))
             print("You have {} guesses left".format(self.guesses))
