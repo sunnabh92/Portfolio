@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Piano player</title>
+    <meta charset="UTF-8"> 
+    <meta name = "authers" content="Guðlaug I. Guðmundsdóttir og Sunna Björk Hermannsdóttir">
+    <link href="https://imagecolorpicker.com/." rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="pianostyle.css">
+    <meta name="keywords" content="HTML, CSS, Assignment 1, T-213-VEFF">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tunediv">
+            <label>Tune:</label>
+            <select name ="Tune" class="tune">
+                <option id="Elise" value="Elise">&#10003;  Für Elise</option>
+                <option value="Godfather">&#10003; The Godfather</option>
+                <option value="Seven Nations Army">&#10003; Seven Nations Army</option>
+            </select>
+            <button class="controls" type='button'><img id="play" src="play.png" alt="A play button, to play the song"></button>
+        </div>
+        <div class="recorddiv">
+            <label>Record:</label>
+            <button class="controls" type='button'><img id="record" src="record.png" alt="A record button, to record the song"></button>
+            <button class="controls" type='button'><img id="stop" src="stop.png" alt="A stop button, to stop the song from playing"></button>
+        </div>
+        <div class="pianodiv-container">
+            <button class="white" type='button'>C4 <br /> (a)</button>
+            <button class="black" id="black1" type='button'>C#4 <br /> (w)</button>
+            <button class="white" type='button'>D4 <br /> (s)</button>
+            <button class="black" id="black2" type='button'>D#4 <br /> (e)</button>
+            <button class="white" type='button'>E4 <br /> (d)</button>
+            <button class="white" type='button'>F4 <br /> (f)</button>
+            <button class="black" id="black3" type='button'>F#4 <br /> (t)</button>
+            <button class="white" type='button'>G4 <br /> (g)</button>
+            <button class="black" id="black4" type='button'>G#4 <br /> (y)</button>
+            <button class="white" type='button'>A4 <br /> (h)</button>
+            <button class="black" id="black5" type='button'>Bb4 <br /> (u)</button>
+            <button class="white" type='button'>B4 <br /> (j)</button>
+            <button class="white" type='button'>C5 <br /> (k)</button>
+            <button class="black" id="black6" type='button'>C#5 <br /> (o)</button>
+            <button class="white" type='button'>D5 <br /> (l)</button>
+            <button class="black" id="black7" type='button'>D#5 <br /> (p)</button>
+            <button class="white" type='button'>E5 <br /> (;)</button>
+        </div>
+    </div>
+    <div class="too-small">
+        <img id="oops" src="oops.jpg" alt="Warning sign that pops up when the screen is to small">
+        <p>This website requires at least 600px screen width</p>
+    </div>
+</body>
+
+</html>
